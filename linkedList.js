@@ -50,7 +50,31 @@ size(){
 }
 
 
+// head()
+head(){
+    if(this.headnode === null){
+        return undefined;
+    } else{
+        let firstNode = this.headnode;
+        return firstNode.value
+    }
+}
 
+
+
+//  tail()
+tail(){
+    if(this.headnode === null){
+        return undefined;
+    } else{
+        let current = this.headnode;
+        while(current.nextNode !== null){
+            current = current.nextNode
+        }
+        return current.value;
+        
+    }
+}
 }
 
 
@@ -68,7 +92,17 @@ list.prepend(5);
 
 
 // size
-console.log(list.size());
+//console.log(list.size());
+
+
+// head()
+console.log(list.head());
+
+
+// tail()
+console.log(list.tail());
+
+
 
 // const list = new LinkedList();
 // list.append(10);
