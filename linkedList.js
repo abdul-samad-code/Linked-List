@@ -75,6 +75,23 @@ tail(){
         
     }
 }
+
+
+
+// at(index)
+at(index){
+    let current =  this.headnode;
+    let count = 0;
+    while(current !== null){
+        if(count === index){
+            return current.value;
+        } else{
+            count++;
+            current = current.nextNode;
+        }
+    }
+    return undefined;
+}
 }
 
 
@@ -87,7 +104,7 @@ list.append(40);
 
 
 // prepend
-list.prepend(5);
+// list.prepend(5);
 // console.log(list);
 
 
@@ -96,19 +113,18 @@ list.prepend(5);
 
 
 // head()
-console.log(list.head());
+//  console.log(list.head());
 
 
 // tail()
-console.log(list.tail());
+// console.log(list.tail());
+
+
+// at(index)
+console.log(list.at(3));
 
 
 
-// const list = new LinkedList();
-// list.append(10);
-// list.append(20);
-// list.append(30);
-// list.append(40);
 
-// console.log(list.headnode);
+
 
