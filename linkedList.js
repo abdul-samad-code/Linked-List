@@ -92,6 +92,33 @@ at(index){
     }
     return undefined;
 }
+
+
+
+// pop()
+pop(){
+    if(this.headnode === null){
+        return undefined;
+    } else {
+        let current = this.headnode;
+        this.headnode = current.nextNode;
+        return current.value;
+    }
+}
+
+
+
+// contains(value)
+contains(value){
+    let current = this.headnode;
+    while(current !== null){
+        if(current.value === value){
+            return true;
+        } 
+        current = current.nextNode;
+    }
+    return false;
+}
 }
 
 
@@ -121,7 +148,17 @@ list.append(40);
 
 
 // at(index)
-console.log(list.at(3));
+// console.log(list.at(3));
+
+
+// pop()
+// console.log(list.pop());
+
+
+// contains(value)
+console.log(list.contains(20));
+console.log(list.contains(50));
+
 
 
 
